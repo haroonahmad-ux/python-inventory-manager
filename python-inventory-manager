@@ -1,0 +1,75 @@
+
+# 📦 Product / Inventory Manager
+
+print("====== PRODUCT INVENTORY MANAGER ======")
+print("====== FINAL PROGRAM CODE ======")
+print()
+
+
+# Product Inventory Data
+products = {
+    "mobile": {
+        "color": "Black, White & Blue",
+        "price": 3200,
+        "stock": 45
+    },
+
+    "charger": {
+        "color": "Black & White",
+        "price": 300,
+        "stock": 100
+    },
+
+    "power_bank": {
+        "color": "Black Only",
+        "price": 4000,
+        "stock": 20
+    }
+}
+
+
+# Display Power Bank Information
+print("Power Bank Information:")
+print(products["power_bank"])
+print()
+
+
+# Check Charger Availability
+if "charger" in products:
+    print("Stock Available")
+print()
+
+
+# Check Mobile Stock
+if products["mobile"]["stock"] > 10:
+    print("Mobile Stock Available")
+else:
+    print("Mobile Stock Not Available")
+print()
+
+
+# Update Charger Stock
+if products["charger"]["stock"] > 25:
+    products["charger"]["stock"] = 400
+
+    print("Updated Charger Stock:")
+    print(products["charger"]["stock"])
+    print(products["charger"])
+print()
+
+
+# Remove Power Bank from Inventory
+removed_product = products.pop("power_bank")
+
+print("Removed Product:")
+print(removed_product)
+print()
+
+
+# Final Inventory Check
+print("Final Inventory:")
+print(products)
+print()
+
+
+print("====== PROGRAM FINISHED ======")
